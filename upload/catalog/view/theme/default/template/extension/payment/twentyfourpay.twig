@@ -1,0 +1,36 @@
+
+
+<form action="{{ action }}" method="post" id="twentyfourpay" >
+  <input type="hidden" name="Mid" value="{{ Mid }}" />
+  <input type="hidden" name="EshopId" value="{{ EshopId }}" />
+  <input type="hidden" name="MsTxnId" value="{{ MsTxnId }}" />
+  <input type="hidden" name="Amount" value="{{ Amount }}" />
+  <input type="hidden" name="CurrAlphaCode" value="{{ CurrAlphaCode }}" />
+  <input type="hidden" name="ClientId" value="{{ ClientId }}" />
+  <input type="hidden" name="FirstName" value="{{ FirstName }}" />
+  <input type="hidden" name="FamilyName" value="{{ FamilyName }}" />
+  <input type="hidden" name="Email" value="{{ Email }}" />
+  <input type="hidden" name="Country" value="{{ Country }}" />
+  <input type="hidden" name="Timestamp" value="{{ Timestamp }}" />
+  <input type="hidden" name="Sign" value="{{ Sign }}" />
+  <input type="hidden" name="NURL" value="{{ NURL }}" />
+  <input type="hidden" name="RURL" value="{{ RURL }}" />
+
+  {% if debug == true %}
+    <input type="hidden" name="Debug" value="true" />
+  {% endif %}
+
+  {% if notify == true %}
+    <input type="hidden" name="NotifyEmail" value="{{ NotifyEmail }}" />
+  {% endif %}
+
+  <div class="buttons">
+    <div class="pull-right">
+      <input type="submit" value="{{ button_confirm }}" id="button-confirm" class="btn btn-primary"/>
+    </div>
+  </div>
+</form>
+
+<script>
+  document.getElementById("twentyfourpay").submit();
+</script>
