@@ -33,6 +33,9 @@ $_['test_param_on']         = 'Test ON';
 $_['notification_email']    = 'Receive notification email from 24-pay';
 $_['receive_email']         = 'Receive';
 
+$_['notify_client']         = 'Send payment status email to client';
+$_['notify_client_on']      = 'Send';
+
 // Error
 $_['error_permission']      = 'Warning: You do not have permission to modify the payment module!';
 $_['error_mid']             = 'Merchant Identificator (MID) is required!';

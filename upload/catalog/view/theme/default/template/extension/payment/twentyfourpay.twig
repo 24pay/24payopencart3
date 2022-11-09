@@ -1,5 +1,3 @@
-
-
 <form action="{{ action }}" method="post" id="twentyfourpay" >
   <input type="hidden" name="Mid" value="{{ Mid }}" />
   <input type="hidden" name="EshopId" value="{{ EshopId }}" />
@@ -24,13 +22,13 @@
     <input type="hidden" name="NotifyEmail" value="{{ NotifyEmail }}" />
   {% endif %}
 
+  {% if clientNotify == true %}
+    <input type="hidden" name="NotifyClient" value="{{ NotifyClient }}" />
+  {% endif %}
+
   <div class="buttons">
     <div class="pull-right">
       <input type="submit" value="{{ button_confirm }}" id="button-confirm" class="btn btn-primary"/>
     </div>
   </div>
 </form>
-
-<script>
-  document.getElementById("twentyfourpay").submit();
-</script>

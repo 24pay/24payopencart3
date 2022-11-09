@@ -53,6 +53,10 @@ class ControllerExtensionPaymentTwentyfourpay extends Controller {
     $data['NURL'] = $formData['settings']['nurl'];
     $data['RURL'] = $formData['settings']['rurl'];
 
+    if ($this->config->get('payment_twentyfourpay_notify_client')) {
+      $data['clientNotify'] = true;
+      $data['NotifyClient'] = $formData['customer']['email'];
+    }
     return $this->load->view('extension/payment/twentyfourpay', $data);
   }
 

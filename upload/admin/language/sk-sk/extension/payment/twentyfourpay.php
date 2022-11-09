@@ -32,6 +32,9 @@ $_['test_param_on']         = 'zapnúť testovanie';
 $_['notification_email']    = 'Chcete dostávať notifikačný email o platbe z 24-pay';
 $_['receive_email']         = 'áno chcem na nižšie uvedený email';
 
+$_['notify_client']         = 'Chcete posielat klientovi notifikačný email o stave platby z 24-pay';
+$_['notify_client_on']      = 'áno chcem';
+
 // Error
 $_['error_permission']      = 'Warning: You do not have permission to modify the payment module!';
 $_['error_mid'] = 'Parameter MID je povinný!';

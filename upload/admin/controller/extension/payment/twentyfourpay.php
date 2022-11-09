@@ -173,6 +173,12 @@ class ControllerExtensionPaymentTwentyfourpay extends Controller {
 			$data['payment_twentyfourpay_debug'] = $this->config->get('payment_twentyfourpay_debug');
 		}
 
+    if (isset($this->request->post['payment_twentyfourpay_notify_client'])) {
+			$data['payment_twentyfourpay_notify_client'] = $this->request->post['payment_twentyfourpay_notify_client'];
+		} else {
+			$data['payment_twentyfourpay_notify_client'] = $this->config->get('payment_twentyfourpay_notify_client');
+		}
+
     if (isset($this->request->post['payment_twentyfourpay_notify'])) {
       $data['payment_twentyfourpay_notify'] = $this->request->post['payment_twentyfourpay_notify'];
     } else {
